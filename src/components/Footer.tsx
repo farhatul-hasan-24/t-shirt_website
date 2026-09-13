@@ -27,8 +27,8 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link to="/products" className="text-sm text-stone-400 hover:text-white transition-colors">Shop All</Link></li>
-              <li><Link to="/products?category=oversized" className="text-sm text-stone-400 hover:text-white transition-colors">Oversized</Link></li>
-              <li><Link to="/products?category=graphic" className="text-sm text-stone-400 hover:text-white transition-colors">Graphic Tees</Link></li>
+              <li><Link to="/about" className="text-sm text-stone-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="text-sm text-stone-400 hover:text-white transition-colors">Contact</Link></li>
               <li><Link to="/wishlist" className="text-sm text-stone-400 hover:text-white transition-colors">Wishlist</Link></li>
               <li><Link to="/account" className="text-sm text-stone-400 hover:text-white transition-colors">My Account</Link></li>
             </ul>

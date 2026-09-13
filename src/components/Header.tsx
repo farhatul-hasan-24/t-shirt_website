@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ShoppingBag, Heart, User, Search, Menu, X, Truck } from 'lucide-react';
 import { useStore } from '../store/useStore';
-import { categories } from '../data/products';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -61,15 +60,12 @@ export function Header() {
               <Link to="/products" className="text-sm font-medium text-stone-700 hover:text-stone-900 transition-colors">
                 Shop
               </Link>
-              {categories.slice(0, 3).map((cat) => (
-                <Link
-                  key={cat.id}
-                  to={`/products?category=${cat.slug}`}
-                  className="text-sm font-medium text-stone-700 hover:text-stone-900 transition-colors"
-                >
-                  {cat.name}
-                </Link>
-              ))}
+              <Link to="/about" className="text-sm font-medium text-stone-700 hover:text-stone-900 transition-colors">
+                About Us
+              </Link>
+              <Link to="/contact" className="text-sm font-medium text-stone-700 hover:text-stone-900 transition-colors">
+                Contact
+              </Link>
             </nav>
 
             {/* Right actions */}
@@ -139,16 +135,12 @@ export function Header() {
               <Link to="/products" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sm font-medium text-stone-700">
                 Shop All
               </Link>
-              {categories.map((cat) => (
-                <Link
-                  key={cat.id}
-                  to={`/products?category=${cat.slug}`}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2 text-sm font-medium text-stone-700"
-                >
-                  {cat.name}
-                </Link>
-              ))}
+              <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sm font-medium text-stone-700">
+                About Us
+              </Link>
+              <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sm font-medium text-stone-700">
+                Contact
+              </Link>
               <Link to="/wishlist" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sm font-medium text-stone-700 sm:hidden">
                 Wishlist
               </Link>

@@ -9,6 +9,8 @@ import { CheckoutPage } from './pages/CheckoutPage';
 import { OrderConfirmationPage } from './pages/OrderConfirmationPage';
 import { AccountPage } from './pages/AccountPage';
 import { WishlistPage } from './pages/WishlistPage';
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             <Route path="/account" element={<AccountPage />} />
             <Route path="/account/orders" element={<AccountPage />} />
             <Route path="/wishlist" element={<WishlistPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
         <Footer />
